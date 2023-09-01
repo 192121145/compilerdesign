@@ -3,7 +3,9 @@
 %}
 
 %%
-[A-Z]+[ \t\n] {printf("%s is a capital letter", yytext);}
+if|else {printf("%s is a keyword", yytext);}
+[0-9]+ {printf("%s is a digit", yytext);}
+[a-z A-Z]+ {printf("%s is an alphabet", yytext);}
 . ;
 %%
 int main()

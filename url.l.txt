@@ -1,13 +1,13 @@
 %{
-%}
+%]
 %%
-((http)|(ftp))s?:\/\/[a-zA-Z0-9]{2}(\.[a-z]{2})+(\/[a-zA-Z0-9+=?]*)* {printf("\nURL invalid\n");}
-.+ {printf("\nURL valid\n");}
+((http)|(ftp))s?\/\/[a-zA-Z0-9]{2}(\[a-z]{2}+(\/[a-zA-z0-9+=?]")*)*{printf("\nURLi invalid");}
+.+ {printf("\nURl valid\n");}
 %%
 int yywrap(){}
 void main()
 {
-printf("\nEnter URL :");
+printf("\n enter URL:");
 yylex();
 printf("\n");
 }
